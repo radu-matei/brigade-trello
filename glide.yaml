@@ -1,7 +1,6 @@
 package: github.com/technosophos/brigade-trello
 import:
-- package: github.com/deis/brigade
-  repo: git@github.com:deis/brigade.git
+- package: github.com/Azure/brigade
   subpackages:
   - pkg/brigade
   - pkg/storage

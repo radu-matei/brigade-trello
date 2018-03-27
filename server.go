@@ -6,10 +6,10 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/deis/brigade/pkg/brigade"
-	"github.com/deis/brigade/pkg/storage"
-	"github.com/deis/brigade/pkg/storage/kube"
-	"github.com/deis/brigade/pkg/webhook"
+	"github.com/Azure/brigade/pkg/brigade"
+	"github.com/Azure/brigade/pkg/storage"
+	"github.com/Azure/brigade/pkg/storage/kube"
+	"github.com/Azure/brigade/pkg/webhook"
 
 	"github.com/gin-gonic/gin"
 )
@@ -84,7 +84,6 @@ func trelloFn(c *gin.Context) {
 		ProjectID: pid,
 		Type:      "trello",
 		Provider:  "trello",
-		Commit:    "master",
 		Payload:   body,
 	}
 
@@ -140,7 +139,6 @@ func genericFn(c *gin.Context) {
 		ProjectID: pid,
 		Type:      "webhook",
 		Provider:  c.Request.UserAgent(),
-		Commit:    "master",
 		Payload:   body,
 		Script:    script,
 	}
